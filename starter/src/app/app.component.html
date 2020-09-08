@@ -1,0 +1,29 @@
+<h1>Hello Abesse</h1>
+<div class="container">
+  <ul>
+    <li>{{ title }}</li>
+    <li>{{ counter }}</li>
+    <li>{{ birthDate }}</li>
+  </ul>
+</div>
+
+<h2>Data Bindings</h2>
+<h3>Interpolation (one way data binding from class to template)</h3>
+<button>{{ counter }}</button>
+
+<h3>Propery Bindings (one way data binding)</h3>
+<button [class]="htmlElementClass">
+  Click Me!
+</button>
+
+<h3>Event Bindings (one way data binding from template to class)</h3>
+<button (click)="changeTitle()">Event-Binding</button>
+
+<h3>Two-Way Data Bindings</h3>
+<div class="form-group">
+  <label for="">Birth Date</label>
+  <!-- <input [value]="birthDate" (input)="birthDate = $event.target.value" type="date"> -->
+  <form action="">
+    <input [(ngModel)]="birthDate" type="date" name="bd">
+  </form>
+</div>
