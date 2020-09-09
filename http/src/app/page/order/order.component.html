@@ -3,11 +3,20 @@
     <table class="table table-striped">
       <thead>
         <tr>
+          <th>#</th>
           <th *ngFor="let col of cols">
             {{ col.title }}
           </th>
         </tr>
       </thead>
+      <tbody>
+        <tr *ngFor="let row of list$ | async; index as i">
+          <td>{{ (i+1) }}</td>
+          <td *ngFor="let col of cols">
+            {{ row[col.key] }}
+          </td>
+        </tr>
+      </tbody>
     </table>
   </div>
 </div>
