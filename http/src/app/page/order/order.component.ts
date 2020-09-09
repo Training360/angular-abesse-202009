@@ -3,7 +3,7 @@ import { OrderService } from 'src/app/service/order.service';
 import { ConfigService } from 'src/app/service/config.service';
 import { Order } from 'src/app/model/order';
 import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { map, tap } from 'rxjs/operators';
 
 @Component({
   selector: 'app-order',
@@ -15,8 +15,12 @@ export class OrderComponent implements OnInit {
   cols = this.config.orderTable;
   list: Order[] = [];
   list$: Observable<Order | Order[]> = this.orderService.read().pipe(
-    map( orders => (orders as Order[]).filter( i => i.price > 10000) )
+    tap( orders => console.log(orders) ),
+    map( orders => (orders as Order[]).filter( i => i.price > 10000) ),
+    tap( orders => console.log(orders) )
   );
+  key = '';
+  phrase = '';
 
   constructor(
     private orderService: OrderService,

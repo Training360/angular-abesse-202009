@@ -1,4 +1,17 @@
 <div class="row">
+  <div class="col-6">
+    <select [(ngModel)]="key" class="form-control">
+      <option value="" selected>all</option>
+      <option value="name" selected>Name</option>
+      <option value="category" selected>Category</option>
+    </select>
+  </div>
+  <div class="col-6 mb-3">
+    <input class="form-control" [(ngModel)]="phrase" type="text">
+  </div>
+</div>
+
+<div class="row">
   <div class="col-12">
     <table class="table table-striped">
       <thead>
@@ -10,7 +23,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let row of list$ | async; index as i">
+        <tr *ngFor="let row of list$ | async | filter:key:phrase; index as i">
           <td>{{ (i+1) }}</td>
           <td *ngFor="let col of cols">
             {{ row[col.key] }}
