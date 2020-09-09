@@ -1,5 +1,11 @@
-<div class="card">
-  <h3>{{ hero.name }}</h3>
-  <h4>{{ hero.address }}</h4>
-  <h4>{{ hero.superpower }}</h4>
+<div class="card mt-2">
+  <div class="card-body">
+    <h5 class="card-title">{{ hero.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ hero.address }}</h6>
+    <p class="card-text">{{ hero.superpower }}</p>
+    <button (click)="onDelete()" class="card-link btn btn-danger">
+      <i class="fa fa-trash"></i>
+      Delete Hero
+    </button>
+  </div>
 </div>

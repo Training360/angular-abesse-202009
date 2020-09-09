@@ -32,9 +32,17 @@
     </a>
   </div>
 
-  <app-hero-detail [hero]="heroes[0]"></app-hero-detail>
-  <app-hero-detail [hero]="heroes[1]"></app-hero-detail>
-  <app-hero-detail [hero]="heroes[2]"></app-hero-detail>
+  <div class="row">
+    <div class="col-4">
+      <input [(ngModel)]="phrase" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-4" *ngFor="let hero of heroes | filter:phrase:heroes.length">
+      <app-hero-detail (deleteHero)="onHeroDelete($event)" [hero]="hero"></app-hero-detail>
+    </div>
+  </div>
 
 
   {{ heroes | json }}
