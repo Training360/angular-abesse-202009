@@ -10,6 +10,7 @@ import { HomeComponent } from './page/home/home.component';
 import { OrderComponent } from './page/order/order.component';
 import { CustomerComponent } from './page/customer/customer.component';
 import { FilterPipe } from './pipe/filter.pipe';
+import { OrderEditComponent } from './page/order-edit/order-edit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FilterPipe } from './pipe/filter.pipe';
     HomeComponent,
     OrderComponent,
     CustomerComponent,
-    FilterPipe
+    FilterPipe,
+    OrderEditComponent
   ],
   imports: [
     BrowserModule,
