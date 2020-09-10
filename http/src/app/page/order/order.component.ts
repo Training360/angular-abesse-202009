@@ -16,12 +16,11 @@ export class OrderComponent implements OnInit {
 
   cols = this.config.orderTable;
   list: Order[] = [];
-  list$: Observable<Order | Order[]> = this.orderService.read();
-  /* .pipe(
+  list$: Observable<Order | Order[]> = this.orderService.currentList$.pipe(
     tap( orders => console.log(orders) ),
     map( orders => (orders as Order[]).filter( i => i.price > 10000) ),
     tap( orders => console.log(orders) )
-  ); */
+  );
   key = '';
   phrase = '';
 
@@ -32,7 +31,12 @@ export class OrderComponent implements OnInit {
     private router: Router,
   ) { }
 
+  onEdit(order: Order): void {
+    this.router.navigate(['orders', 'edit', order.id]);
+  }
+
   ngOnInit(): void {
+    this.orderService.read().subscribe( () => {} );
     /* this.cd.detach();
     setInterval( () => {
       this.cd.detectChanges();
@@ -44,8 +48,10 @@ export class OrderComponent implements OnInit {
     ); */
   }
 
-  onEdit(order: Order): void {
-    this.router.navigate(['orders', 'edit', order.id]);
+  onDelete(order: Order): void {
+    this.orderService.delete(order).subscribe(
+      response => alert(`A ${order.name} törlésre került.`),
+      err => alert(`Hiba a törlés során!`)
+    );
   }
-
 }

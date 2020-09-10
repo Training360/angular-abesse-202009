@@ -1,1 +1,24 @@
-<p>order-edit works!</p>
+<div class="row">
+  <div class="col-6 offset-3">
+    <form #uf="ngForm" (ngSubmit)="onUpdate(uf, order)" *ngIf="order$ | async; let order">
+      <div *ngFor="let field of fieldList" class="form-group">
+        <label for="">{{ field.title }}</label>
+        <input
+          [(ngModel)]="order[field.key]"
+          [name]="field.key"
+          [type]="field.type ? field.type : 'text'"
+          [pattern]="field.pattern ? field.pattern : ''"
+          class="form-control"
+          required>
+          <div [hidden]="uf.controls[field.key]?.valid || uf.controls[field.key]?.untouched" class="error-message">
+            This field is required.
+          </div>
+        </div>
+        <button
+          [disabled]="uf.invalid"
+          class="btn btn-primary btn-block mb-4" type="submit">
+          <i class="fa fa-save"></i> Save
+        </button>
+    </form>
+  </div>
+</div>
