@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Charlie Firpo",
       "email": "charlie@gmail.com",
-      "password": "$2a$10$q.N5rB9exsrr5XO6vzXpK.JajGyjiDgJiXvU3JrsXMcQrhtk2Mnz2",
+      "password": "$2a$10$rYIj4E6iGeLsQz5Y0mbjIeaNt5uI311j3FdPQn11regR9QB3M0YO6",
       "role": 1
     },
     {
       "id": 2,
       "name": "Johnny Firpo",
       "email": "johnny@gmail.com",
-      "password": "$2a$10$LQxuA93z5BA8LYJggBxa/.mvUvjNLEEUNBhQhor7duJV3EVJkC1Py",
+      "password": "$2a$10$0.YXPYBDNcKgd2fqADv34.N0Ir79fdcHHDQvC31JF3q6FtS5Ksfy.",
       "role": 2
     },
     {
       "id": 3,
       "name": "Jack Firpo",
       "email": "jack@gmail.com",
-      "password": "$2a$10$IHV3HAVxOMWB1ECqWzmpOO8u60OqTufW92wZhTI2.ZHlvmUw3UV1W",
+      "password": "$2a$10$hCYq71vKjlk1rrsxBzwVZulCtA/YmPN5gsZfNDlIdG10w2JZFyE3O",
       "role": 3
     }
   ]

@@ -22,10 +22,10 @@
       </li>
     </ul>
     <div>
-      <button *ngIf="!(user$ | async)" class="btn btn-success">
+      <button routerLink="/login" *ngIf="!(user$ | async)" class="btn btn-success">
         <i class="fa fa-user"></i>
       </button>
-      <button *ngIf="(user$ | async)" class="btn btn-default">
+      <button (click)="onLogout()" *ngIf="(user$ | async)" class="btn btn-default">
         <i class="fa fa-sign-out"></i>
       </button>
     </div>
