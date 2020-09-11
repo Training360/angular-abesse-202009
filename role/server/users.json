@@ -4,21 +4,21 @@
       "id": 1,
       "name": "Charlie Firpo",
       "email": "charlie@gmail.com",
-      "password": "",
+      "password": "$2a$10$q.N5rB9exsrr5XO6vzXpK.JajGyjiDgJiXvU3JrsXMcQrhtk2Mnz2",
       "role": 1
     },
     {
       "id": 2,
       "name": "Johnny Firpo",
       "email": "johnny@gmail.com",
-      "password": "",
+      "password": "$2a$10$LQxuA93z5BA8LYJggBxa/.mvUvjNLEEUNBhQhor7duJV3EVJkC1Py",
       "role": 2
     },
     {
       "id": 3,
       "name": "Jack Firpo",
       "email": "jack@gmail.com",
-      "password": "",
+      "password": "$2a$10$IHV3HAVxOMWB1ECqWzmpOO8u60OqTufW92wZhTI2.ZHlvmUw3UV1W",
       "role": 3
     }
   ]
