@@ -14,7 +14,8 @@ export class AuthService {
   loginUrl = 'http://localhost:3000/login';
   logoutUrl = 'http://localhost:3000/logout';
 
-  currentUserSubject: BehaviorSubject<User> = new BehaviorSubject(null);
+  private currentUserSubject: BehaviorSubject<User> = new BehaviorSubject(null);
+  currentUser$: Observable<User> = this.currentUserSubject.asObservable();
   lastToken: string = null;
 
   constructor(
