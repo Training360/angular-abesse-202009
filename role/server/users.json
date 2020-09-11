@@ -1,0 +1,25 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Charlie Firpo",
+      "email": "charlie@gmail.com",
+      "password": "",
+      "role": 1
+    },
+    {
+      "id": 2,
+      "name": "Johnny Firpo",
+      "email": "johnny@gmail.com",
+      "password": "",
+      "role": 2
+    },
+    {
+      "id": 3,
+      "name": "Jack Firpo",
+      "email": "jack@gmail.com",
+      "password": "",
+      "role": 3
+    }
+  ]
+}
