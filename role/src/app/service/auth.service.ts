@@ -24,7 +24,11 @@ export class AuthService {
     private userService: UserService,
   ) {
     const localUser = localStorage.getItem('currentUser');
-    this.currentUserSubject.next( localUser ? JSON.parse(localUser) : null );
+    if (localUser) {
+      const user: User = JSON.parse(localUser);
+      this.lastToken = user.token;
+      this.currentUserSubject.next(user);
+    }
   }
 
   login(loginData: User): Observable<{accessToken: string}> {
